@@ -10,10 +10,11 @@ import CategoryPage from "./Pages/Home/CategoryPage";
 import ExplorePage from "./Pages/ExplorePage";
 import PlayListPage from "./Pages/PlayListPage";
 import WatchLaterPage from "./Pages/WatchLaterPage";
-import VideoListPage from "./Pages/Home/VideoListPage";
+import VideoListPage from "./Pages/Home/videoListPage";
 import SingleVideoPage from "./Pages/Home/SingleVideoPage";
 import { ChakraProvider } from "@chakra-ui/react";
 import VideoContextProvider from "./Context/videoContext";
+import PlaylistVideoPAge from "./Pages/PlaylistVideoPAge";
 
 function App() {
 	const router = createBrowserRouter(
@@ -21,12 +22,10 @@ function App() {
 			<Route path="/" element={<LayoutPage />}>
 				<Route index={true} element={<CategoryPage />} />
 				<Route path={`/category/:categoryName`} element={<VideoListPage />} />
-				<Route
-					path={`/category/:categoryName/video/:videoId`}
-					element={<SingleVideoPage />}
-				/>
+				<Route path={`/video/:videoId`} element={<SingleVideoPage />} />
 				<Route path="/explore" element={<ExplorePage />} />
 				<Route path="/playlist" element={<PlayListPage />} />
+				<Route path="/playlist/:playlistId" element={<PlaylistVideoPAge />} />
 				<Route path="/watch-later" element={<WatchLaterPage />} />
 			</Route>,
 			<Route path="*" element={<ErrorPage />} />,

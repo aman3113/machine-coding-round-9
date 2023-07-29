@@ -10,7 +10,6 @@ const LayoutPage = () => {
 		console.log("i run");
 		localStorage.setItem("myVideoLibraryData", JSON.stringify(state));
 	}
-
 	useEffect(() => {
 		window.addEventListener("beforeunload", handlePageUnload);
 		// Clean up the event listener on component unmount
@@ -19,12 +18,12 @@ const LayoutPage = () => {
 		};
 	}, []);
 
-	console.log(state);
-
 	return (
-		<div className="flex">
+		<div className="flex h-screen w-screen flex-col-reverse sm:flex-row">
 			<Sidebar />
-			<Outlet />
+			<div className="h-[90%] sm:h-full overflow-y-auto p-2 sm:p-2 w-full md:w-[75%] lg:w-[80%] shadow-md shadow-gray-300 rounded-md">
+				<Outlet />
+			</div>
 		</div>
 	);
 };

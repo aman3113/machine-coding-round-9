@@ -51,6 +51,8 @@ export const categories = [
 
 export const videos = [
 	{
+		notes: [],
+		watchLater: false,
 		_id: 19,
 		title: "Origami Swan - Simple and Elegant",
 		views: 2879,
@@ -61,6 +63,8 @@ export const videos = [
 		creator: "PaperCraftPro",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 20,
 		title: "Kirigami Flower Bouquet - Beautiful Handmade Gift",
 		views: 1756,
@@ -71,6 +75,8 @@ export const videos = [
 		creator: "Crafty Delights",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 21,
 		title: "Sculpting Animals from Polymer Clay - Step by Step Guide",
 		views: 2251,
@@ -81,6 +87,8 @@ export const videos = [
 		creator: "CraftyCritters",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 22,
 		title: "Stop Motion Short Film - Adventure in Toyland",
 		views: 3172,
@@ -91,6 +99,8 @@ export const videos = [
 		creator: "ToyStoryMakers",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 23,
 		title: "Handmade Pottery Vases - Decorating with Ceramic Glaze",
 		views: 2879,
@@ -101,6 +111,8 @@ export const videos = [
 		creator: "CeramicArtistry",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 24,
 		title: "Quilling Art Techniques - Creating Intricate Designs",
 		views: 1756,
@@ -111,6 +123,8 @@ export const videos = [
 		creator: "ArtfulQuills",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 25,
 		title: "Origami Crane Mobile - DIY Home Decor",
 		views: 2251,
@@ -121,6 +135,8 @@ export const videos = [
 		creator: "HomeCraftHacks",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 26,
 		title: "Kirigami Birthday Pop-Up Box - Surprise Gift",
 		views: 3172,
@@ -131,6 +147,8 @@ export const videos = [
 		creator: "GiftsFromHeart",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 27,
 		title: "Sculpting Fantasy Creatures - Unleash Your Imagination",
 		views: 2879,
@@ -141,6 +159,8 @@ export const videos = [
 		creator: "FantasyArtWorks",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 28,
 		title: "Stop Motion Animation Contest - Show Your Skills",
 		views: 1756,
@@ -151,6 +171,8 @@ export const videos = [
 		creator: "AnimateMasters",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 29,
 		title: "Pottery Wheel Techniques - Creating Stunning Bowls",
 		views: 2251,
@@ -161,6 +183,8 @@ export const videos = [
 		creator: "ArtisticPots",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 30,
 		title: "Quilling Greeting Cards - Handmade Cards for Every Occasion",
 		views: 3172,
@@ -171,6 +195,8 @@ export const videos = [
 		creator: "CraftyGreetings",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 31,
 		title: "Origami Elephant - Step-by-Step Tutorial",
 		views: 2879,
@@ -181,6 +207,8 @@ export const videos = [
 		creator: "OrigamiWonderland",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 32,
 		title: "Kirigami Art Collage - Combining Paper Shapes",
 		views: 1756,
@@ -191,6 +219,8 @@ export const videos = [
 		creator: "CreativeFolds",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 33,
 		title: "Sculpting Realistic Portraits - Mastering Human Faces",
 		views: 2251,
@@ -201,6 +231,8 @@ export const videos = [
 		creator: "PortraitsInClay",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 34,
 		title: "Stop Motion Animation Tips and Tricks",
 		views: 3172,
@@ -211,6 +243,8 @@ export const videos = [
 		creator: "AnimateMagic",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 35,
 		title: "Pottery Art Exhibition - Celebrating Local Artists",
 		views: 2879,
@@ -221,6 +255,8 @@ export const videos = [
 		creator: "ArtisticExpressions",
 	},
 	{
+		notes: [],
+		watchLater: false,
 		_id: 36,
 		title: "Quilling 3D Wall Art - Adding Depth to Paper Designs",
 		views: 1756,
@@ -229,5 +265,14 @@ export const videos = [
 		src: "https://www.youtube.com/embed/GBIIQ0kP15E",
 		category: "Quilling",
 		creator: "PaperArtDimensions",
+	},
+];
+
+export const playList = [
+	{
+		id: 1,
+		title: "MY MUSIC",
+		description: "My favourite gym hits",
+		items: [21, 34, 35],
 	},
 ];
