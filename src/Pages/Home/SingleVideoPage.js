@@ -14,7 +14,6 @@ import {
 	ModalOverlay,
 	ModalContent,
 	ModalHeader,
-	ModalFooter,
 	ModalBody,
 	ModalCloseButton,
 } from "@chakra-ui/react";
@@ -61,13 +60,17 @@ const SingleVideoPage = () => {
 
 	function handleFormSubmit(e) {
 		e.preventDefault();
-		dispatch({ type: "ADD PLAYLIST", payload: formData });
-		setFormData({
-			title: "",
-			description: "",
-			thumbnail: "",
-		});
-		setOpenPlayListModal(false);
+		if (formData.title.trim() !== "") {
+			dispatch({ type: "ADD PLAYLIST", payload: formData });
+			setFormData({
+				title: "",
+				description: "",
+				thumbnail: "",
+			});
+			setOpenPlayListModal(false);
+		} else {
+			alert("PLease add title to playlist");
+		}
 	}
 
 	// Notes Modal
@@ -162,10 +165,10 @@ const SingleVideoPage = () => {
 								<div>
 									<p className="text-lg font-bold">Your Playlists:</p>
 									{state.playList?.map((item) => (
-										<div className="flex items-center">
+										<div className="flex items-center gap-2  border px-2 rounded-md py-1">
 											<span
 												key={item.id}
-												className="cursor-pointer border px-2 rounded-md py-1 w-full"
+												className="cursor-pointer w-full"
 												onClick={() => addVideoToPlayList(item.id, video._id)}
 											>
 												{item.title}
@@ -186,7 +189,7 @@ const SingleVideoPage = () => {
 							)}
 
 							<button
-								className="border bg-red-500 text-white px-3 py-1 rounded-md"
+								className="border bg-red-500 text-white px-3 py-1 rounded-md my-2"
 								onClick={() => setOpenPlayListModal(true)}
 							>
 								Create New Playlist

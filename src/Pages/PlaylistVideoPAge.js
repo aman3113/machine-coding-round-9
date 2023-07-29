@@ -22,7 +22,7 @@ const PlaylistVideoPAge = () => {
 				{playListItems.map((video) => (
 					<div className="relative" key={video._id}>
 						<SingleVideoComponent video={video} />
-						<div className="absolute top-0 right-0 bg-white p-1">
+						<div className="absolute top-0 left-0 bg-white p-1">
 							<RxCross2
 								className="cursor-pointer"
 								onClick={() =>

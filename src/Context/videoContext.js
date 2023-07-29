@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 import { playList, videos } from "../Utils/Data";
 
 export const videoContext = createContext();
@@ -14,10 +14,9 @@ function reducer(state, action) {
 	const { type, payload } = action;
 
 	switch (type) {
-		case "ADD VIDEOS":
+		case "ADD FROM LOCAL STORAGE":
 			return {
-				...state,
-				videos: [...payload],
+				payload,
 			};
 
 		case "ADD TO WATCH LATER":
@@ -92,6 +91,13 @@ function reducer(state, action) {
 
 export default function VideoContextProvider({ children }) {
 	const [state, dispatch] = useReducer(reducer, initialState);
+
+	function handlePageUnload() {
+		localStorage.setItem("myVideoLibraryData", JSON.stringify(state));
+	}
+	useEffect(() => {
+		handlePageUnload();
+	}, [state]);
 
 	return (
 		<videoContext.Provider value={{ state, dispatch }}>
