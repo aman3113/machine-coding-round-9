@@ -6,7 +6,7 @@ import SingleVideoComponent from "../../Components/SingleVideoComponent";
 
 const VideoListPage = () => {
 	const { categoryName } = useParams();
-	const { state, dispatch } = useContext(videoContext);
+	const { state } = useContext(videoContext);
 	const categoryVideos = state.videos?.filter((video) => {
 		return video.category === categoryName;
 	});
